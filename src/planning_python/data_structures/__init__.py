@@ -1,4 +1,2 @@
-import sys
-sys.path.insert(0, "../..")
-from planning_problem import PlanningProblem
-from priority_queue import PriorityQueue
+from planning_python.data_structures.planning_problem import PlanningProblem
+from planning_python.data_structures.priority_queue import PriorityQueue

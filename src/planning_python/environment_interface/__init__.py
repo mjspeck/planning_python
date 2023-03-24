@@ -1,4 +1,1 @@
-import sys
-sys.path.insert(0, "../..")
-
-from env_2d import Env2D
+from planning_python.environment_interface.env_2d import Env2D

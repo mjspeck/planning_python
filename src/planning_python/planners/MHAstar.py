@@ -1,14 +1,9 @@
 #!/usr/bin/env python
-import os
-import sys
 import numpy as np
-from threading import Thread
-from sets import Set
 import time
-sys.path.insert(0, os.path.abspath('..'))
 from planning_python.data_structures import PriorityQueue
 from Planner import *
-from planning_python.utils import heuristic_functions, planner_utils#, visualization_utils
+from planning_python import heuristic_functions, planner_utils#, visualization_utils
 
 # from graphs import *
 class MHAstar(Planner):

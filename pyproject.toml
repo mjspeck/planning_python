@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "planning_python"
 version = "0.1.0"
 requires-python = ">=3.8"
-dependencies = ["numpy"]
+dependencies = ["dubins", "matplotlib", "numpy", "scipy"]
 
 # [tool.setuptools.packages.find]
 # where = ["src"]
