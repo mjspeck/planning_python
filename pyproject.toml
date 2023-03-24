@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "planning_python"
+version = "0.1.0"
+requires-python = ">=3.8"
+dependencies = ["numpy"]
+
+# [tool.setuptools.packages.find]
+# where = ["src"]
+
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "docformatter",
+    "isort",
+    "pydocstyle",
+    "pylint",
+    "pytest",
+    "pytest-black",
+    "pytest-cov",
+    "pytest-dependency",
+    "pytest-mypy",
+    "pytest-timeout",
+]
+
+[tool.isort]
+include_trailing_comma = "True"
+use_parentheses = "True"
+known_first_party = "planning_python"
+multi_line_output = 3
+force_grid_wrap = 0
+line_length = 88
+
+[tool.mypy]
+ignore_missing_imports = "True"
+disallow_untyped_calls = "False"
+disallow_untyped_defs = "True"
+disallow_incomplete_defs = "True"
+files = "src/"
+exclude = "tests/"
+follow_imports = "silent"
+
+[tool.pytest]
+testpaths = "tests"
+addopts = ["--black", "--cov=python_planning", "--cov-report html"]
+
+[tool.pydocstyle]
+convention = "numpy"
+add_ignore = "D2,D105,D101,D100,D104,D106timeout"
